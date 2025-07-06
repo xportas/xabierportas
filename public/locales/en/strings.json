@@ -93,8 +93,37 @@
         "D18": "Implementation of Agile Methodologies (Scrum and Kanban)."
       },
       "LOCATION": "Sarriguren, NA",
-      "RANGE": "Jan 2024 - Present",
+      "RANGE": "Jan 2024 - Jul 2025",
       "TITLE": "FullStack Developer"
+    },
+    "TRACASA2": {
+      "DUTIES": {
+        "D1": "Analysis and development of multi-platform GIS (Geographic Information System) applications, covering the complete software development life cycle, from requirements analysis to production deployment. My role involves direct interaction with clients to understand their needs, translate business requirements into technical solutions, and coordinate development for the continuous implementation and improvement of applications.",
+        "D2": "[ ANALYSIS AND PROJECT MANAGEMENT ]",
+        "D3": "Technical and functional leadership of projects. Client contact for requirements gathering and analysis.",
+        "D4": "Definition and prioritization of improvements and new functionalities based on client needs and project objectives.",
+        "D5": "Planning and organizing development tasks, ensuring alignment with client expectations and established deadlines.",
+        "D6": "Management of deployments, ensuring stability and performance.",
+        "D7": "[ FRONT-END ]",
+        "D8": "Design, development, and maintenance of responsive user interfaces for all types of devices.",
+        "D9": "React.js, MaterialUI, OpenLayers, HTML5, CSS3, Styled-Components.",
+        "D10": "[ BACK-END ]",
+        "D11": "Development and maintenance of APIs and services for client-server communication.",
+        "D12": "Optimization of business logic.",
+        "D13": "ASP.NET Core, Entity Framework.",
+        "D14": "[ DATABASES ]",
+        "D15": "Administration of relational databases.",
+        "D16": "Creation of automations for data management and ensuring its integrity.",
+        "D17": "PostgreSQL with PostGIS extension.",
+        "D18": "[ GIS AND SPATIAL DATA ]",
+        "D19": "Management of spatial data with GeoServer.",
+        "D20": "Development of QGIS plugins in Python.",
+        "D21": "[ METHODOLOGIES AND TOOLS ]",
+        "D22": "Version control with Git, GitLab, and AzureDevOps.",
+        "D23": "Implementation of Agile Methodologies (Scrum and Kanban)."
+      },
+      "RANGE": "July 2025 - Present",
+      "TITLE": "FullStack Developer Analyst"
     }
   },
   "LANG_SELECTOR": {
@@ -126,6 +155,10 @@
     "RETRO_WEBSITE": {
       "DESCRIPT": "A homage born out of longing. This open-source single page application combines retro design with modern technologies, creating an experience where past and future merge to transport the user back to the arcade era.",
       "TITLE": "Retro Website"
+    },
+    "OOFF": {
+      "DESCRIPT": "Navarra geospatial tool that optimizes territorial analysis and forest management in the region. App for visualizing spatial data of the Foral Community.",
+      "TITLE": "Geospatial viewer"
     },
     "TITLE": "Some Things I’ve Built"
   },

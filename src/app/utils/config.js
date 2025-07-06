@@ -30,7 +30,6 @@ module.exports = {
       JS: 'JavaScript',
       Py: 'Python',
       TS: 'TypeScript',
-      Java: 'Java',
       HTML: 'HTML',
       CSS: 'CSS',
     },
@@ -38,8 +37,6 @@ module.exports = {
       NET: '.NET CORE',
       EF: 'Entity Framework',
       REACT: 'React',
-      SPR: 'Spring',
-      IO: 'Ionic',
       TW: 'Tailwind CSS',
       BS: 'Bootstrap',
     },
@@ -61,13 +58,45 @@ module.exports = {
       QGIS: 'QGIS',
     },
     'Others': {
-      DOCK: 'Docker',
+      JEN: 'Jenkins',
       SCRUM: 'Scrum',
       KAN: 'Kanban'
     },
   },
 
   jobs: {
+    "TRACASA2": {
+      "title": "JOBS.TRACASA2.TITLE",
+      "company": "JOBS.TRACASA.COMPANY",
+      "location": "JOBS.TRACASA.LOCATION",
+      "range": "JOBS.TRACASA2.RANGE",
+      "url": "https://itracasa.es/",
+      "duties": {
+        "d1": "JOBS.TRACASA2.DUTIES.D1",
+        "d2": "JOBS.TRACASA2.DUTIES.D2",
+        "d3": "JOBS.TRACASA2.DUTIES.D3",
+        "d4": "JOBS.TRACASA2.DUTIES.D4",
+        "d5": "JOBS.TRACASA2.DUTIES.D5",
+        "d6": "JOBS.TRACASA2.DUTIES.D6",
+        "d7": "JOBS.TRACASA2.DUTIES.D7",
+        "d8": "JOBS.TRACASA2.DUTIES.D8",
+        "d9": "JOBS.TRACASA2.DUTIES.D9",
+        "d10": "JOBS.TRACASA2.DUTIES.D10",
+        "d11": "JOBS.TRACASA2.DUTIES.D11",
+        "d12": "JOBS.TRACASA2.DUTIES.D12",
+        "d13": "JOBS.TRACASA2.DUTIES.D13",
+        "d14": "JOBS.TRACASA2.DUTIES.D14",
+        "d15": "JOBS.TRACASA2.DUTIES.D15",
+        "d16": "JOBS.TRACASA2.DUTIES.D16",
+        "d17": "JOBS.TRACASA2.DUTIES.D17",
+        "d18": "JOBS.TRACASA2.DUTIES.D18",
+        "d19": "JOBS.TRACASA2.DUTIES.D19",
+        "d20": "JOBS.TRACASA2.DUTIES.D20",
+        "d21": "JOBS.TRACASA2.DUTIES.D21",
+        "d22": "JOBS.TRACASA2.DUTIES.D22",
+        "d23": "JOBS.TRACASA2.DUTIES.D23"
+      }
+    },
     "TRACASA": {
       "title": "JOBS.TRACASA.TITLE",
       "company": "JOBS.TRACASA.COMPANY",
@@ -140,6 +169,19 @@ module.exports = {
         "HTML"
       ],
       description: "PROJECTS.RETRO_WEBSITE.DESCRIPT"
+    },
+    ooff: {
+      title: "PROJECTS.OOFF.TITLE",
+      cover: "/images/screenshot-ooff.png",
+      github: "https://administracionelectronica.navarra.es/VisorOrdenacionForestal/",
+      tech: [
+        "PostGIS",
+        "PostgreSQL",
+        "GeoServer",
+        "OpenLayers",
+        "API SITNA"
+      ],
+      description: "PROJECTS.OOFF.DESCRIPT"
     }
   }
 };

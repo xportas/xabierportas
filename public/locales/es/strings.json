@@ -93,8 +93,37 @@
         "D18": "Implementación de Metodologías Ágiles (Scrum y Kanban)."
       },
       "LOCATION": "Sarriguren, NA",
-      "RANGE": "Enero 2024 - Actualidad",
+      "RANGE": "Enero 2024 - Julio 2025",
       "TITLE": "Desarrollador FullStack"
+    },
+    "TRACASA2": {
+      "DUTIES": {
+        "D1": "Análisis y desarrollo de aplicaciones GIS (Geographic Information System) multiplataforma, abarcando el ciclo de vida completo del software, desde el análisis de requerimientos hasta el despliegue en producción. Mi rol implica interacción directa con los clientes para comprender sus necesidades, traducir los requisitos de negocio en soluciones técnicas y coordinar el desarrollo para la implementación y mejora continua de las aplicaciones.",
+        "D2": "[ ANÁLISIS Y GESTIÓN DE PROYECTOS ]",
+        "D3": "Liderazgo técnico y funcional de proyectos. Contacto con clientes para la recopilación y análisis de requisitos.",
+        "D4": "Definición y priorización de mejoras y nuevas funcionalidades basándome en las necesidades del cliente y los objetivos del proyecto.",
+        "D5": "Planificación y organización de las tareas de desarrollo, asegurando la alineación con las expectativas del cliente y los plazos establecidos.",
+        "D6": "Gestión de despliegues y puesta en producción de las aplicaciones, garantizando la estabilidad y el correcto funcionamiento.",
+        "D7": "[ FRONT-END ]",
+        "D8": "Diseño, desarrollo y mantenimiento de interfaces de usuario responsivas para todo tipo de dispositivos.",
+        "D9": "React.js, MaterialUI, OpenLayers, HTML5, CSS3, Styled-Components.",
+        "D10": "[ BACK-END ]",
+        "D11": "Desarrollo y mantenimiento de APIs y servicios para la comunicación cliente-servidor.",
+        "D12": "Optimización de la lógica de negocio.",
+        "D13": "ASP.NET Core, Entity Framework.",
+        "D14": "[ BASES DE DATOS ]",
+        "D15": "Administración de bases de datos relacionales.",
+        "D16": "Creación de automatizaciones para la gestión de los datos y garantizar su integridad.",
+        "D17": "PostgreSQL con extensión PostGIS.",
+        "D18": "[ GIS Y DATOS ESPACIALES ]",
+        "D19": "Gestión de datos espaciales con GeoServer.",
+        "D20": "Desarrollo de complementos de QGIS en Python.",
+        "D21": "[ METODOLOGÍAS Y HERRAMIENTAS ]",
+        "D22": "Control de versiones con Git, GitLab y AzureDevOps.",
+        "D23": "Implementación de Metodologías Ágiles (Scrum y Kanban)."
+      },
+      "RANGE": "Julio 2025 - Actualidad",
+      "TITLE": "Analista Desarrollador FullStack"
     }
   },
   "LANG_SELECTOR": {
@@ -126,6 +155,10 @@
     "RETRO_WEBSITE": {
       "DESCRIPT": "Un homenaje desde la nostalgia. Esta single page application de código abierto combina el diseño vintage con tecnologías modernas, creando una experiencia en la que pasado y futuro se fusionan para transportar al usuario a los años del arcade.",
       "TITLE": "Retro Website"
+    },
+    "OOFF": {
+      "DESCRIPT": "Herramienta geoespacial de Navarra que optimiza el análisis territorial y la gestión forestal en la región. Herramienta para la visualización de datos espaciales de la Comuniad Foral.",
+      "TITLE": "Visor geoespacial"
     },
     "TITLE": "Proyectos personales"
   },

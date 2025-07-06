@@ -93,8 +93,37 @@
         "D18": "Implementación de Metodoloxías Áxiles (Scrum e Kanban)."
       },
       "LOCATION": "Sarriguren, NA",
-      "RANGE": "Xan 2024 - Actualidade",
+      "RANGE": "Xan 2024 - Xul 2025",
       "TITLE": "FullStack Developer"
+    },
+    "TRACASA2": {
+      "DUTIES": {
+        "D1": "Análise e desenvolvemento de aplicacións GIS (Sistema de Información Xeográfica) multiplataforma, abranguendo o ciclo de vida completo do software, dende a análise de requirimentos até o despregue en produción. O meu rol implica interacción directa cos clientes para comprender as súas necesidades, traducir os requisitos de negocio en solucións técnicas e coordinar o desenvolvemento para a implementación e mellora continua das aplicacións.",
+        "D2": "[ ANÁLISE E XESTIÓN DE PROXECTOS ]",
+        "D3": "Liderado técnico e funcional de proxectos. Contacto con clientes para a recompilación e análise de requirimentos.",
+        "D4": "Definición e priorización de melloras e novas funcionalidades baseándome nas necesidades do cliente e os obxectivos do proxecto.",
+        "D5": "Planificación e organización das tarefas de desenvolvemento, asegurando o aliñamento coas expectativas do cliente e os prazos establecidos.",
+        "D6": "Xestión de despregues e posta en produción das aplicacións, garantindo a estabilidade e o correcto funcionamento.",
+        "D7": "[ FRONT-END ]",
+        "D8": "Deseño, desenvolvemento e mantemento de interfaces de usuario responsivas para todo tipo de dispositivos.",
+        "D9": "React.js, MaterialUI, OpenLayers, HTML5, CSS3, Styled-Components.",
+        "D10": "[ BACK-END ]",
+        "D11": "Desenvolvemento e mantemento de APIs e servizos para a comunicación cliente-servidor.",
+        "D12": "Optimización da lóxica de negocio.",
+        "D13": "ASP.NET Core, Entity Framework.",
+        "D14": "[ BASES DE DATOS ]",
+        "D15": "Administración de bases de datos relacionais.",
+        "D16": "Creación de automatizacións para a xestión dos datos e garantir a súa integridade.",
+        "D17": "PostgreSQL con extensión PostGIS.",
+        "D18": "[ GIS E DATOS ESPACIAIS ]",
+        "D19": "Xestión de datos espaciais con GeoServer.",
+        "D20": "Desenvolvemento de complementos de QGIS en Python.",
+        "D21": "[ METODOLOXÍAS E FERRAMENTAS ]",
+        "D22": "Control de versións con Git, GitLab e AzureDevOps.",
+        "D23": "Implementación de Metodoloxías Áxiles (Scrum e Kanban)."
+      },
+      "RANGE": "Xullo 2025 - Actualidade",
+      "TITLE": "Analista Desenvolvedor FullStack"
     }
   },
   "LANG_SELECTOR": {
@@ -126,6 +155,10 @@
     "RETRO_WEBSITE": {
       "DESCRIPT": "Unha homenaxe dende a nostalxia. Esta single page application de código aberto combina o deseño retro con tecnoloxías modernas, creando unha experiencia na que pasado e futuro se fusionan para transportar ao usuario aos anos do arcade.",
       "TITLE": "Retro Website"
+    },
+    "OOFF": {
+      "DESCRIPT": "Ferramenta xeoespacial de Navarra que optimiza a análise territorial e a xestión forestal da rexión. Aplicativo para a visualización de datos espaciais da Comunidade Foral.",
+      "TITLE": "Visor xeoespacial"
     },
     "TITLE": "Proxectos persoais"
   },
