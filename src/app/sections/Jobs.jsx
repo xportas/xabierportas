@@ -152,18 +152,18 @@ export default function Jobs({ screenWidth }) {
 
                 <h4 className='mb-[2px] font-medium animate-wipeInRight' style={{ fontSize: '22px', lineHeight: 1.3 }}>
                   <span className='text-base min-[1080px]:text-xl min-[1375px]:text-2xl min-[1375px]:whitespace-nowrap'>{t(`${job.title}`)}</span>
-                  <span className="text-base min-[1080px]:text-xl min-[1375px]:text-2xl min-[1375px]:whitespace-nowrap text-secondary-orange">
-                    &nbsp;@&nbsp;
+                  <p className="text-base min-[1080px]:text-xl min-[1375px]:text-2xl min-[1375px]:whitespace-nowrap text-secondary-orange">
+                    @&nbsp;
                     <a href={job.url} target="_blank" rel="noopener noreferrer">
                       {t(`${job.company}`)}
                     </a>
-                  </span>
+                  </p>
                 </h4>
 
                 <p className='mb-6 text-secondary-gray animate-wipeInRight' style={{ fontSize: '13px' }}>{t(`${job.range}`)}</p>
 
                 <div className='p-0 m-0'>
-                  <ul className='p-0 m-0 list-none ' style={{ fontSize: '18px' }}>
+                  <ul className='p-0 m-0 list-none' style={{ fontSize: '18px' }}>
                     {Object.values(job.duties).map((dutie, i) => {
                       const showBullet = t(`${dutie}`).startsWith("[");
                       return (
