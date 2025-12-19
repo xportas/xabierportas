@@ -73,7 +73,7 @@ export default function RetroScreen({ i18n, currentLanguage, setCurrentLanguage,
 
       {/* PowerOnBtn --> "turning ON" the web */}
       {!anySoundON && (
-        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black z-50">
+        <div className="absolute top-0 left-0 w-full h-dvh flex justify-center items-center bg-black z-50">
           <PowerOnBtn handleStartMainThemeAudio={handleTurningOnWeb} />
         </div>
       )}
