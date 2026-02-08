@@ -27,6 +27,9 @@ export const metadata = {
     description: "Xabier Portas | Desarrollador Full Stack en Pamplona - .NET, React, PostgreSQL, GIS, GeoServer, OpenLayers",
     images: ["https://github.com/xportas/xportas-website/blob/main/public/images/xportas-img.jpeg"],
   },
+  verification: {
+    google: "idGGRcrWEq0-v8J00oWbGGgN9CEABvyeaI1Ng6Cr-7c",
+  },
 };
 
 export default function RootLayout({ children }) {
