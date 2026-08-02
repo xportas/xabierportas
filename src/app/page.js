@@ -44,31 +44,30 @@ export default function Home() {
     }
 
     const updateDimensions = () => setScreenWidth(window.innerWidth);
-    // let ticking = false;
+
+    let ticking = false;
     const updateScrollFactor = () => {
       const scrollY = window.scrollY;
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
       setScrollFactor(Math.min(scrollY / maxScroll, 1));
-    //   ticking = false;
-    // };
+      ticking = false;
+    };
 
-    // const onScroll = () => {
-    //   if (!ticking) {
-    //     window.requestAnimationFrame(updateScrollFactor);
-    //     ticking = true;
-    //   }
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollFactor);
+        ticking = true;
+      }
     };
 
     updateDimensions();
     updateScrollFactor();
     window.addEventListener('resize', updateDimensions);
-    window.addEventListener('scroll', updateScrollFactor, { passive: true });
-    // window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => {
       window.removeEventListener('resize', updateDimensions);
-      window.removeEventListener('scroll', updateScrollFactor);
-      // window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('scroll', onScroll);
     };
   }, []);
 

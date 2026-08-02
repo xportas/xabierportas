@@ -160,6 +160,10 @@
       "DESCRIPT": "Navarra geospatial tool that optimizes territorial analysis and forest management in the region. App for visualizing spatial data of the Foral Community.",
       "TITLE": "Geospatial viewer"
     },
+    "OPR": {
+      "DESCRIPT": "Web app for generating weekly menus based on the most recent scientific evidence in the field of nutrition. It lets you quickly generate the menu and the shopping list for a healthy, balanced diet, adapted to the user's lifestyle.",
+      "TITLE": "Open Random Recipes"
+    },
     "TITLE": "Some Things I’ve Built"
   },
   "RETRO_SCREEN": {

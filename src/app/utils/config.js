@@ -156,6 +156,34 @@ module.exports = {
   },
 
   projects: {
+    ooff: {
+      title: "PROJECTS.OOFF.TITLE",
+      cover: "/images/screenshot-ooff.webp",
+      coverWidth: 1200,
+      coverHeight: 567,
+      github: "https://administracionelectronica.navarra.es/VisorOrdenacionForestal/",
+      tech: [
+        "PostGIS",
+        "PostgreSQL",
+        "GeoServer",
+        "OpenLayers",
+        "API SITNA"
+      ],
+      description: "PROJECTS.OOFF.DESCRIPT"
+    },
+    opr: {
+      title: "PROJECTS.OPR.TITLE",
+      cover: "/images/opr.webp",
+      coverWidth: 1200,
+      coverHeight: 567,
+      github: "https://github.com/xportas/open-random-recipes",
+      tech: [
+        "Next.js",
+        "React",
+        "Tailwind CSS"
+      ],
+      description: "PROJECTS.OPR.DESCRIPT"
+    },
     website: {
       title: "PROJECTS.RETRO_WEBSITE.TITLE",
       cover: "/images/screenshot-xportas-retro-screen.webp",
@@ -171,21 +199,6 @@ module.exports = {
         "HTML"
       ],
       description: "PROJECTS.RETRO_WEBSITE.DESCRIPT"
-    },
-    ooff: {
-      title: "PROJECTS.OOFF.TITLE",
-      cover: "/images/screenshot-ooff.webp",
-      coverWidth: 1200,
-      coverHeight: 567,
-      github: "https://administracionelectronica.navarra.es/VisorOrdenacionForestal/",
-      tech: [
-        "PostGIS",
-        "PostgreSQL",
-        "GeoServer",
-        "OpenLayers",
-        "API SITNA"
-      ],
-      description: "PROJECTS.OOFF.DESCRIPT"
     }
   }
 };

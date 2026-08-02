@@ -81,7 +81,7 @@ export default function Projects({ screenWidth }) {
                           <li
                             key={j}
                             className="text-secondary-gray max-[768px]:text-orange-800 text-[13px] whitespace-nowrap ml-0 mr-5 mt-0 mb-[5px] 
-                                        max-[768px]:text-[#ccd6f6)] max-[768px]:ml-0 max-[768px]:mr-2.5 max-[768px]:mt-0 max-[768px]:mb-[5px]"
+                                        max-[768px]:ml-0 max-[768px]:mr-2.5 max-[768px]:mt-0 max-[768px]:mb-[5px]"
                           >
                             {skill}
                           </li>

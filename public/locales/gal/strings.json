@@ -160,6 +160,10 @@
       "DESCRIPT": "Ferramenta xeoespacial de Navarra que optimiza a análise territorial e a xestión forestal da rexión. Aplicativo para a visualización de datos espaciais da Comunidade Foral.",
       "TITLE": "Visor xeoespacial"
     },
+    "OPR": {
+      "DESCRIPT": "Aplicación web para a xeración de menús semanais baseados na evidencia científica máis recente do campo da nutrición. Permite xerar rapidamente o menú e a lista da compra para unha dieta saudable e equilibrada, adaptada ao estilo de vida da persoa usuaria.",
+      "TITLE": "Open Random Recipes"
+    },
     "TITLE": "Proxectos persoais"
   },
   "RETRO_SCREEN": {

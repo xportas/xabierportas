@@ -26,7 +26,7 @@ export default function ModernDeviceWarning({ closeMDWarning, handleAcceptMDWarn
             typingDelay={70} />
         </div>
       </div>
-      <div className="absolute text- top-3/4 left-1/2 text-center -translate-x-1/2 -translate-y-1/2 text-white">
+      <div className="absolute top-3/4 left-1/2 text-center -translate-x-1/2 -translate-y-1/2 text-white">
         <button
           className="bg-white text-black text-lg py-2 px-4 
                     hover:bg-black hover:text-white hover:border-2 hover:border-dashed hover:border-white"
