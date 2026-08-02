@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import Skill from '../components/Skill';
@@ -86,9 +87,13 @@ export default function About() {
                   after:transition-all after:duration-500 after:ease-out
                   after:top-4 after:left-4 after:z-[-1] after:border-dashed after:border-2 after:border-main-gray 
                   ">
-            <img className="relative rounded mix-blend-multiply filter grayscale contrast-100 transition-all duration-500 ease-out
+            <Image className="relative rounded mix-blend-multiply filter grayscale contrast-100 transition-all duration-500 ease-out
                     hover:filter-none hover:mix-blend-normal focus:filter-none focus:mix-blend-normal"
-              src="/images/xportas-img.jpeg" />
+              src="/images/xportas-img.jpeg"
+              alt="Xabier Portas"
+              width={1068}
+              height={1068}
+              sizes="(max-width: 768px) 70vw, 300px" />
           </div>
         </div>
 

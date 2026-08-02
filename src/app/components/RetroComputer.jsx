@@ -1,6 +1,15 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import {
+  AmbientLight,
+  LoadingManager,
+  PerspectiveCamera,
+  Scene,
+  SpotLight,
+  SRGBColorSpace,
+  Vector3,
+  WebGLRenderer
+} from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -12,22 +21,25 @@ export default function RetroComputer({ setHiddenRetroComputer, scrollFactor, se
   const scrollFactorOperation = (scrollFactor || 0) * 4.7;
 
   useEffect(() => {
-    const manager = new THREE.LoadingManager();
+    let isMounted = true;
+    const manager = new LoadingManager();
 
     manager.onProgress = (url, itemsLoaded, itemsTotal) => {
-      setProgress(Math.round((itemsLoaded / itemsTotal) * 100));
+      if (isMounted) setProgress(Math.round((itemsLoaded / itemsTotal) * 100));
     };
 
-    manager.onLoad = () => setProgress(100);
+    manager.onLoad = () => {
+      if (isMounted) setProgress(100);
+    };
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    const renderer = new WebGLRenderer({ antialias: true, alpha: true });
+    renderer.outputColorSpace = SRGBColorSpace;
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.shadowMap.enabled = false;
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 100);
+    const scene = new Scene();
+    const camera = new PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 100);
     camera.position.set(1, 2.5, 5);
     const initialZoom = camera.position.z;
 
@@ -42,30 +54,30 @@ export default function RetroComputer({ setHiddenRetroComputer, scrollFactor, se
     controls.maxPolarAngle = 1.32;
     controls.rotateSpeed = 0.1;
     controls.autoRotate = false;
-    controls.target = new THREE.Vector3(0, 4, 0);
+    controls.target = new Vector3(0, 4, 0);
 
-    // DEMAND RENDERING SETUP
     const render = () => {
       renderer.render(scene, camera);
     };
 
     controls.addEventListener('change', render);
 
-    const spotLight = new THREE.SpotLight(0xffffff, 3000, 0, 1, 2);
+    const spotLight = new SpotLight(0xffffff, 3000, 0, 1, 2);
     spotLight.position.set(10, 15, 15);
     spotLight.castShadow = false;
     scene.add(spotLight);
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+
+    const ambientLight = new AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
 
-    // DRACO LOADER SETUP
     const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath('/draco/'); // Path to decoder files in public/draco/
+    dracoLoader.setDecoderPath('/draco/');
 
     const loader = new GLTFLoader(manager).setPath('models/commodore/');
     loader.setDRACOLoader(dracoLoader);
 
     loader.load('scene.glb', (gltf) => {
+      if (!isMounted) return;
       const mesh = gltf.scene;
       mesh.position.set(0, 2.05, 0);
       scene.add(mesh);
@@ -77,7 +89,8 @@ export default function RetroComputer({ setHiddenRetroComputer, scrollFactor, se
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
       render();
-    }
+    };
+
     window.addEventListener('resize', onWindowResize, false);
 
     let startTime = null;
@@ -98,16 +111,21 @@ export default function RetroComputer({ setHiddenRetroComputer, scrollFactor, se
       if (t < 1) {
         animationFrameId = requestAnimationFrame(animateZoom);
       } else {
-        setHiddenRetroComputer(true);
+        if (isMounted) setHiddenRetroComputer(true);
         controls.enabled = true;
         controls.enableZoom = false;
-        document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+        if (typeof document !== 'undefined') {
+          const htmlEl = document.getElementsByTagName("html")[0];
+          if (htmlEl) htmlEl.style.overflowY = "scroll";
+        }
       }
+    };
+
+    const mountNode = mountRef.current;
+    if (mountNode) {
+      mountNode.appendChild(renderer.domElement);
     }
 
-    mountRef.current.appendChild(renderer.domElement);
-
-    // Initial render
     render();
 
     const observer = new IntersectionObserver(
@@ -122,26 +140,47 @@ export default function RetroComputer({ setHiddenRetroComputer, scrollFactor, se
       },
       { threshold: 0.5 }
     );
-    if (mountRef.current) observer.observe(mountRef.current);
+
+    if (mountNode) observer.observe(mountNode);
 
     return () => {
+      isMounted = false;
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
-      if (mountRef.current) observer.unobserve(mountRef.current);
-      if (mountRef.current && mountRef.current.contains(renderer.domElement)) {
-        mountRef.current.removeChild(renderer.domElement);
+      if (mountNode) observer.unobserve(mountNode);
+      if (mountNode && mountNode.contains(renderer.domElement)) {
+        mountNode.removeChild(renderer.domElement);
       }
       window.removeEventListener('resize', onWindowResize);
       controls.removeEventListener('change', render);
-      renderer.dispose();
+
+      // Thorough WebGL & Three.js Memory Disposal
+      scene.traverse((object) => {
+        if (object.geometry) object.geometry.dispose();
+        if (object.material) {
+          if (Array.isArray(object.material)) {
+            object.material.forEach((mat) => {
+              if (mat.map) mat.map.dispose();
+              mat.dispose();
+            });
+          } else {
+            if (object.material.map) object.material.map.dispose();
+            object.material.dispose();
+          }
+        }
+      });
+
+      controls.dispose();
       dracoLoader.dispose();
+      renderer.forceContextLoss();
+      renderer.dispose();
     };
-  }, [setProgress]);
+  }, [setProgress, setHiddenRetroComputer]);
 
   return (
     <>
       <div
         className="fixed top-0 left-0 transition-all duration-300 ease-out"
-        style={{ opacity: 1 - scrollFactorOperation, zIndex: scrollFactorOperation !== 0 && -1 }}
+        style={{ opacity: 1 - scrollFactorOperation, zIndex: scrollFactorOperation !== 0 ? -1 : undefined }}
       >
         <div ref={mountRef} />
       </div>

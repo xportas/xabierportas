@@ -158,7 +158,9 @@ module.exports = {
   projects: {
     website: {
       title: "PROJECTS.RETRO_WEBSITE.TITLE",
-      cover: "/images/screenshot-xportas-retro-screen.png",
+      cover: "/images/screenshot-xportas-retro-screen.webp",
+      coverWidth: 1200,
+      coverHeight: 695,
       github: "https://github.com/xportas/xportas-website",
       tech: [
         "Next.js",
@@ -172,7 +174,9 @@ module.exports = {
     },
     ooff: {
       title: "PROJECTS.OOFF.TITLE",
-      cover: "/images/screenshot-ooff.png",
+      cover: "/images/screenshot-ooff.webp",
+      coverWidth: 1200,
+      coverHeight: 567,
       github: "https://administracionelectronica.navarra.es/VisorOrdenacionForestal/",
       tech: [
         "PostGIS",

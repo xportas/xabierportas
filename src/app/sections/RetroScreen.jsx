@@ -83,10 +83,10 @@ export default function RetroScreen({ i18n, currentLanguage, setCurrentLanguage,
         id='screen'>
 
         {(anySoundON && !isTouchDevice) && <PacManGhosts />}
-        <audio ref={mainThemeAudioRef} src="/audio/main-song.mp3" loop />
-        <audio ref={pcNoiseRef} src="/audio/old-pc.mp3" loop />
-        <audio ref={pcShutdownNoiseRef} src="/audio/pc-shutdown.mp3" />
-        <audio ref={pcTurnOnNoiseRef} src="/audio/pc-turnon.mp3" />
+        <audio ref={mainThemeAudioRef} src="/audio/main-song.mp3" loop preload="none" />
+        <audio ref={pcNoiseRef} src="/audio/old-pc.mp3" loop preload="none" />
+        <audio ref={pcShutdownNoiseRef} src="/audio/pc-shutdown.mp3" preload="none" />
+        <audio ref={pcTurnOnNoiseRef} src="/audio/pc-turnon.mp3" preload="none" />
 
         {(!isTouchDevice && muted && turningONanimation) &&
           <VolumeXIcon size={75} color="#ffad36" strokeWidth={0} radius={0}

@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { PixelatedImage } from '../components/PixelatedImage';
@@ -86,17 +87,21 @@ export default function LangSelector({ i18n, setCurrentLanguage, setRetroScreenO
         {showKeyboardInstructions && (
           <>
             <div className="flex items-center justify-center md:justify-start space-x-3">
-              <img
+              <Image
                 src="./images/arrow-keys-icon.svg"
                 alt="arrow-keys"
+                width={56}
+                height={56}
                 className="w-8 h-8 md:w-14 md:h-14"
               />
               <span className="text-sm md:text-base">{t('LANG_SELECTOR.MOVE_OPT')}</span>
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3">
-              <img
+              <Image
                 src="./images/enter-key-icon.svg"
                 alt="enter-keys"
+                width={44}
+                height={44}
                 className="w-6 h-6 md:w-11 md:h-11"
               />
               <span className="text-sm md:text-base">{t('LANG_SELECTOR.SELECT_ONE_LANG')}</span>

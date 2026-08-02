@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import Plumber from '../components/Plumber';
@@ -46,7 +47,7 @@ export default function Projects({ screenWidth }) {
       <ul className="p-0 m-0 flex flex-wrap items-center justify-center max-w-[1200px] mx-auto max-[768px]:m-7" style={{ listStyle: 'none' }}>
         {projects &&
           Object.entries(projects).map(([key, project], i) => {
-            const { title, cover, github, tech, description } = project;
+            const { title, cover, coverWidth, coverHeight, github, tech, description } = project;
 
             return (
               <li
@@ -92,10 +93,14 @@ export default function Projects({ screenWidth }) {
 
                 <div className="col-[6_/_-1] row-span-full relative z-[1] max-[768px]:col-span-full max-[768px]:h-full max-[768px]:opacity-30">
                   <a href={github || '#'} target="_blank" rel="noopener noreferrer" className={`relative z-10 w-full h-full rounded align-middle`}>
-                    <img
-                      src={cover} alt={title}
+                    <Image
+                      src={cover}
+                      alt={t(title)}
+                      width={coverWidth}
+                      height={coverHeight}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1080px) 60vw, 500px"
                       className="shadow-custom rounded brightness-[70%] max-[768px]:object-cover max-[768px]:w-full max-[768px]:h-full
-                                max-[768px]:grayscale max-[768px]:contrast-100 max-[768px]:brightness-[50%] 
+                                max-[768px]:grayscale max-[768px]:contrast-100 max-[768px]:brightness-[50%]
                                 transition-all duration-500 ease-out hover:shadow-custom-hover hover:-translate-x-1 hover:-translate-y-1
                                 focus:shadow-custom-hover focus:-translate-x-1 focus:-translate-y-1"
                     />

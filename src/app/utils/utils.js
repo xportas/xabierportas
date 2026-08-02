@@ -1,7 +1,7 @@
 export const languageOptions = [
-  { value: "en", flag: "https://hatscripts.github.io/circle-flags/flags/uk.svg", level: "B2" },
-  { value: "es", flag: "https://hatscripts.github.io/circle-flags/flags/es.svg", level: "C2" },
-  { value: "pt", flag: "https://hatscripts.github.io/circle-flags/flags/pt.svg", level: "C1" },
+  { value: "en", flag: "./images/uk.svg", level: "B2" },
+  { value: "es", flag: "./images/es.svg", level: "C2" },
+  { value: "pt", flag: "./images/pt.svg", level: "C1" },
   { value: "gl", flag: "./images/gz.svg", level: "C2" }
 ];
 
