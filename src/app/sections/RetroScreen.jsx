@@ -94,7 +94,7 @@ export default function RetroScreen({ i18n, currentLanguage, setCurrentLanguage,
         }
 
         <div className="flex flex-col items-center h-full w-full absolute max-[767px]:mb-10">
-          <div className='flex max-[767px]:flex-col min-[1090px]:h-3/5 max-w-6xl m-auto'>
+          <div className='flex max-[767px]:flex-col min-[1090px]:h-3/5 max-w-6xl w-full m-auto'>
 
             <RetroHero retroScreenOn={retroScreenOn} />
 
