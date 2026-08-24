@@ -34,11 +34,9 @@ module.exports = {
       CSS: 'CSS',
     },
     'Frameworks': {
+      REACT: 'React',
       NET: '.NET CORE',
       EF: 'Entity Framework',
-      REACT: 'React',
-      TW: 'Tailwind CSS',
-      BS: 'Bootstrap',
     },
     'Databases': {
       POST: 'PostgreSQL',
@@ -59,8 +57,9 @@ module.exports = {
     },
     'Others': {
       JEN: 'Jenkins',
-      SCRUM: 'Scrum',
-      KAN: 'Kanban'
+      AGILE: 'Agile',
+      TW: 'Tailwind CSS',
+      BS: 'Bootstrap',
     },
   },
 
