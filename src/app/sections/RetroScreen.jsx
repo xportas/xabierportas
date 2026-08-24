@@ -79,8 +79,8 @@ export default function RetroScreen({ i18n, currentLanguage, setCurrentLanguage,
         </div>
       )}
 
-      <div className={`h-screen w-screen m-0 p-0 relative overflow-hidden text-retroScreen-txtcolor
-                    before:content-[''] before:absolute before:bg-[rgba(20,14,8,0.25)] before:z-[1] before:inset-0 ${anySoundON && 'cursor-none'}`}
+      <div className={`h-screen w-screen m-0 p-0 bg-fixed bg-cover bg-center relative text-retroScreen-txtcolor retro-text-border
+                    before:content-[''] before:absolute before:bg-[rgba(20,14,8,0.4)] before:z-[1] before:inset-0 ${anySoundON && 'cursor-none'}`}
         id='screen'>
 
         <RetroBackground />
@@ -96,7 +96,7 @@ export default function RetroScreen({ i18n, currentLanguage, setCurrentLanguage,
             className={`absolute z-50 w-11 min-[425px]:w-14 min-[550px]:w-16 sm:w-20 right-7 top-3 sm:top-7 min-[1090px]:right-16`} />
         }
 
-        <div className="flex flex-col items-center h-full w-full absolute max-[767px]:mb-10 z-[2]">
+        <div className="flex flex-col items-center h-full w-full absolute max-[767px]:mb-10">
           <div className='flex max-[767px]:flex-col min-[1090px]:h-3/5 max-w-6xl w-full m-auto'>
 
             <RetroHero retroScreenOn={retroScreenOn} />

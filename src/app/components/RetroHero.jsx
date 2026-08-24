@@ -14,7 +14,7 @@ export default function RetroHero({ retroScreenOn }) {
           {t('RETRO_SCREEN.GREETING')}
         </p>
       </div>
-      <div className='inline-block justify-center text-retroScreen-bgcolor max-[767px]:m-auto whitespace-nowrap'>
+      <div className='inline-block justify-center text-retroScreen-bgcolor max-[767px]:m-auto whitespace-nowrap [text-shadow:none]'>
         <span className='bg-retroScreen-txtcolor py-2 sm:py-3 text-2xl min-[600px]:text-3xl md:text-4xl font-main'>
           {t('RETRO_SCREEN.I_AM')}
         </span>

@@ -247,3 +247,23 @@ section h3::before {
           hover:before:w-full
           before:bg-secondary-orange;
 }
+
+  .retro-text-border {
+    text-shadow: 
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000;
+  }
+
+  .retro-text-border-2 {
+    text-shadow: 
+      -2px  0   0 #000,
+       2px  0   0 #000,
+       0   -2px 0 #000,
+       0    2px 0 #000,
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000;
+  }
