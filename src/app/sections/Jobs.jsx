@@ -100,15 +100,15 @@ export default function Jobs({ screenWidth }) {
         {t('JOBS.TITLE')}
       </h3>
 
-      <div className="flex max-[650px]:block max-[650px]:max-w-full min-[750px]:min-h-[340px] max-w-[1040px] mx-auto">
+      <div className="flex max-[650px]:block max-[650px]:max-w-full min-[750px]:min-h-[340px] max-w-[1200px] mx-auto">
         <div onKeyDown={(e) => onKeyDown(e)}
-          className="relative w-max p-0 m-0 list-none z-10 max-[480px]:w-full
+          className="relative w-[30%] shrink-0 p-0 m-0 list-none z-10 max-[480px]:w-full
                       max-[650px]:flex max-[650px]:overflow-x-auto max-[650px]:w-full
                         max-[650px]:mb-2" >
           {jobs && Object.entries(jobs).map(([key, job], i) => {
             return (
               <button
-                className={`link-style flex justify-start items-center w-full h-11 py-0 border-l-4 border-solid border-main-gray min-[651px]:whitespace-nowrap
+                className={`link-style flex justify-start items-center w-full h-11 py-0 border-l-4 border-solid border-main-gray truncate
                             bg-transparent font-header text-[8px] min-[480px]:text-[10px] min-[1375px]:text-xs text-left max-[768px]:pt-0 max-[768px]:px-4 
                             max-[768px]:pb-[2px] max-[650px]:flex max-[650px]:justify-between max-[650px]:items-center max-[650px]:min-w-32
                             max-[650px]:px-0 max-[650px]:border-l-0 max-[650px]:border-b-2 max-[650px]:border-[#a8947e8b] max-[650px]:text-center
